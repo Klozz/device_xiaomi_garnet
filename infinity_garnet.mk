@@ -15,7 +15,7 @@ $(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 $(call inherit-product, device/xiaomi/garnet/device.mk)
 
 # MiuiCamera
-$(call inherit-product-if-exists, device/xiaomi/miuicamera-garnet/device.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuicamera.mk)
 
 PRODUCT_NAME := infinity_garnet
 PRODUCT_DEVICE := garnet
