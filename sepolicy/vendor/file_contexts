@@ -49,6 +49,7 @@
 /dev/goodix_fp u:object_r:vendor_fingerprint_device:s0
 /mnt/vendor/persist/fpc(/.*)? u:object_r:vendor_fingerprint_data_file:s0
 /mnt/vendor/persist/goodix(/.*)? u:object_r:vendor_fingerprint_data_file:s0
+/vendor/bin/init\.fingerprint\.sh u:object_r:init_fingerprint_exec:s0
 
 # Health
 /vendor/bin/hw/android\.hardware\.health-service\.xiaomi                              u:object_r:hal_health_default_exec:s0

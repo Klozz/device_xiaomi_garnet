@@ -248,6 +248,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_fw_fstab.qti \
     fstab.qcom \
+    init.hardware.rc \
+    init.fingerprint.sh \
     init.garnet.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
