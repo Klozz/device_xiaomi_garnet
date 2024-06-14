@@ -8,8 +8,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
+# Inherit some common PixelOS stuff.
+TARGET_DISABLE_EPPE := true
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
@@ -17,21 +18,18 @@ $(call inherit-product, device/xiaomi/garnet/device.mk)
 # MiuiCamera
 $(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuicamera.mk)
 
-PRODUCT_NAME := infinity_garnet
+# Build
+TARGET_HAS_UDFPS := true
+TARGET_ENABLE_BLUR := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_BOOT_ANIMATION_RES  := 1080
+
+PRODUCT_NAME := aosp_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 2312DRA50G
-
-# Infinity-X Specific Flags
-INFINITY_BUILD_TYPE := OFFICIAL
-INFINITY_MAINTAINER := franlop77
-
-# More flags
-TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_SUPPORTS_BLUR := true
-WITH_GAPPS := true
-TARGET_BUILD_GOOGLE_TELEPHONY := true
 
 PRODUCT_SYSTEM_NAME := garnet_global
 PRODUCT_SYSTEM_DEVICE := garnet

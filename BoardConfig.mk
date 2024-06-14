@@ -105,8 +105,8 @@ BOARD_USES_GENERIC_KERNEL_IMAGE := true
 BOARD_KERNEL_CMDLINE := \
     video=vfb:640x400,bpp=32,memsize=3072000 \
     disable_dma32=on \
-    bootinfo.fingerprint=$(INFINITY_VERSION) \
-    swinfo.fingerprint=$(INFINITY_VERSION)
+    bootinfo.fingerprint=$(AOSP_VERSION) \
+    swinfo.fingerprint=$(AOSP_VERSION)
 
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \

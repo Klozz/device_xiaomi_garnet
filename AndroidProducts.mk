@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/infinity_garnet.mk
+    $(LOCAL_DIR)/aosp_garnet.mk
 
 COMMON_LUNCH_CHOICES := \
-    infinity_garnet-user \
-    infinity_garnet-userdebug \
-    infinity_garnet-eng
+    aosp_garnet-user \
+    aosp_garnet-userdebug \
+    aosp_garnet-eng
