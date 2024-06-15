@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_garnet.mk
+    $(LOCAL_DIR)/blaze_garnet.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_garnet-user \
-    aosp_garnet-userdebug \
-    aosp_garnet-eng
+    blaze_garnet-user \
+    blaze_garnet-userdebug \
+    blaze_garnet-eng
