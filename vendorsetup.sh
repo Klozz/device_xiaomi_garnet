@@ -2,7 +2,7 @@ echo 'Starting to clone stuffs needed to build for lemonadep'
 
 # Vendor
 echo 'Cloning vendor tree'
-rm -rf vendor/xiaomi/garnet && git clone https://github.com/JYRRC/vendor_xiaomi_garnet.git -b 14.0 vendor/xiaomi/garnet
+rm -rf vendor/xiaomi/garnet && git clone https://github.com/CarlosPriQue/vendor_xiaomi_garnet.git -b blaze vendor/xiaomi/garnet
 
 # Kernel
 echo 'Cloning kernel tree'
