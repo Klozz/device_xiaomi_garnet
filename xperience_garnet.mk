@@ -8,9 +8,9 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Blaze stuff.
+# Inherit some common XPerience stuff.
 TARGET_DISABLE_EPPE := true
-$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
+$(call inherit-product, vendor/xperience/config/common.mk)
 
 # Inherit from garnet device
 $(call inherit-product, device/xiaomi/garnet/device.mk)
@@ -21,15 +21,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/garnet-miuicamera/products/miuic
 # Build
 TARGET_HAS_UDFPS := true
 TARGET_UDFPS_ANIMATIONS := true
-TARGET_BOOT_ANIMATION_RES := 1440
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_USES_PICO_GAPPS := true
-#BLAZE_BUILD_TYPE := OFFICIAL
-BLAZE_MAINTAINER := PriQue
-WITH_GAPPS := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
 
-PRODUCT_NAME := blaze_garnet
+PRODUCT_NAME := xperience_garnet
 PRODUCT_DEVICE := garnet
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := Redmi

@@ -131,6 +131,9 @@ PRODUCT_PACKAGES += \
     bootctrl.garnet.recovery
 
 # Camera
+$(call inherit-product-if-exists, vendor/xiaomi/camera/miuicamera.mk)
+
+# Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.7.vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
@@ -182,7 +185,7 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Viper
-$(call inherit-product, packages/apps/ViPER4AndroidFX/config.mk)
+$(call inherit-product-if-exist, packages/apps/ViPER4AndroidFX/config.mk)
 
 TARGET_EXCLUDES_AUDIOFX := true
 
@@ -407,9 +410,17 @@ PRODUCT_PACKAGES += \
     WifiOverlayGarnetRedmi \
     WifiOverlayGarnetRedmiCN
 
+# Platform
+TARGET_BOARD_PLATFORM := parrot
+TARGET_COMMON_QTI_COMPONENTS := \
+    av \
+    bt \
+    media \
+    telephony
+
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service-qti
+    android.hardware.power-service
 
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.perf@2.3.vendor
@@ -501,9 +512,6 @@ PRODUCT_PACKAGES += \
     qti-telephony-utils-prd \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
     telephony-ext
 
 PRODUCT_COPY_FILES += \

@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/blaze_garnet.mk
+    $(LOCAL_DIR)/xperience_garnet.mk
 
 COMMON_LUNCH_CHOICES := \
-    blaze_garnet-user \
-    blaze_garnet-userdebug \
-    blaze_garnet-eng
+    xperience_garnet-user \
+    xperience_garnet-userdebug \
+    xperience_garnet-eng
