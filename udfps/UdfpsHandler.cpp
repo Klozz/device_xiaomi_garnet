@@ -106,7 +106,7 @@ static ssize_t readBuffer(int fd, char *buffer, int size) {
 
 class XiaomiGarnetUdfpsHander : public UdfpsHandler {
   public:
-    void init(fingerprint_device_t* device) {
+    void init(xiaomi_fingerprint_device_t* device) {
         mDevice = device;
 
         touchDevice = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
@@ -283,7 +283,7 @@ class XiaomiGarnetUdfpsHander : public UdfpsHandler {
     }
 
   private:
-    fingerprint_device_t* mDevice;
+    xiaomi_fingerprint_device_t* mDevice;
     android::base::unique_fd touchDevice;
     android::base::unique_fd dispDevice;
     int brightnessValue;
